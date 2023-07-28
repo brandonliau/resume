@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
+% Author : Brandon Liau
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
@@ -18,21 +18,11 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
+%----------PAGE SETUP----------
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -55,13 +45,13 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
+
+%----------CUSTOM COMMANDS----------
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -97,32 +87,32 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
+
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Brandon Liau} \\ \vspace{1pt}
-    \small 848-468-2066 $|$ \href{mailto:x@x.com}{\underline{bliauuu03@gmail.com}} $|$ 
-    \href{https://linkedin.com/in/bliauu}{\underline{linkedin.com/in/bliauu}} $|$
-    \href{https://github.com/brandonliau}{\underline{github.com/brandonliau}}
+    \textbf{\Huge \scshape Brandon Liau} \\ \vspace{7pt}
+    \small \faIcon{phone} 848-468-2066 $|$ 
+    \href{mailto:x@x.com}{\faIcon{envelope} \underline{bliauuu03@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/bliauu}{\faIcon{linkedin} \underline{linkedin.com/in/bliauu}} $|$
+    \href{https://github.com/brandonliau}{\faIcon{github} \underline{github.com/brandonliau}}
 \end{center}
 
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Rutgers University}{New Brunswick, NJ}
-      {Bachelor of Science in Computer Science}{Expected May 2026}
+      {Rutgers University}{\textbf{Expected May 2026}}
+      {Bachelor of Science in Computer Science}{New Brunswick, NJ}
       \resumeItemListStart
-        \resumeItem{\textbf{Relevant Coursework}: Introduction to Computer Science, Data Structure and Algorithms, Computer Architecture, Systems Programming}
+        \resumeItem{\textbf{Relevant Coursework}: Linear Algebra, Discrete Strctures I \& II, Introduction to Computer Science, Data Structures, Computer Architecture}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -131,43 +121,19 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Java, C, SQL} \\
-     \textbf{Libraries and Frameworks}{: scikit-learn, pandas, NumPy, Matplotlib, FastAPI} \\
+     \textbf{Languages}{: Python, Java, C, SQL} \vspace{1.3pt}\\
+     \textbf{Libraries and Frameworks}{: Scikit-learn, Pandas, NumPy, Matplotlib, FastAPI} \vspace{1.3pt}\\
+     \textbf{Technologies}{: Machine Learning, MongoDB} \vspace{1.3pt}\\
      \textbf{Tools}{: Git, Docker, Google Cloud Platform, Google Colab, Jupyter, VS Code, PyCharm, IntelliJ} \\
     }}
  \end{itemize}
-
-
-%-----------EXPERIENCE-----------
-% \section{Additional Studies}
-%   \resumeSubHeadingListStart
-
-%     \resumeSubheading
-%       {CS50}{June 2023 - July 2023}
-%       {Texas A\&M University}{College Station, TX}
-%       \resumeItemListStart
-%         \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-%         \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-%         \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
-%       \resumeItemListEnd
-
-%     \resumeSubheading
-%       {Information Technology Support Specialist}{Sep. 2018 -- Present}
-%       {Southwestern University}{Georgetown, TX}
-%       \resumeItemListStart
-%         \resumeItem{Communicate with managers to set up campus computers used on campus}
-%         \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-%         \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-%     \resumeItemListEnd
-
-%   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{RuTransloc} $|$ \emph{Python, scikit-learn, Juypter, FastAPI, Docker, Google Cloud Platform}}{March 2023 - Present}
+          {\textbf{RuTransloc} $|$ \emph{Python, Scikit-learn, Juypter, FastAPI, Docker, GCP}}{\textbf{Mar 2023 - May 2023}}
           \resumeItemListStart
             \resumeItem{Developed extensive REST API with \textbf{FastAPI}}
             \resumeItem{Used a \textbf{Google Cloud VM instance} and cronjob to automate data collection script}
@@ -177,7 +143,7 @@
             \resumeItem{Pushed Docker image to \textbf{Google Cloud Artifact Registry} and deployed it with \textbf{Google Cloud Run}}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{WagerPilot} $|$ \emph{Python, MongoDB, PyMongo, Typer, Google Cloud Platform}}{May 2023 - Present}
+          {\textbf{WagerPilot} $|$ \emph{Python, MongoDB, PyMongo, Typer, GCP}}{\textbf{May 2023 - July 2023}}
           \resumeItemListStart
             \resumeItem{Developed comprehensive command line interface application with \textbf{Typer}}
             \resumeItem{Created library with functions to convert odds, calculate probability, and manage bankroll}
@@ -187,7 +153,7 @@
             \resumeItem{Updated database daily with script running on a \textbf{Google Cloud VM instance}}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Gitlet} $|$ \emph{Java, Maven, JUnit}}{Jul 2023 - Present}
+          {\textbf{Gitlet} $|$ \emph{Java, Maven, JUnit}}{\textbf{Jul 2023 - Present}}
           \resumeItemListStart
             \resumeItem{Developed a local version control system heavily inspired by \textbf{Git}}
             \resumeItem{Implemented major Git features such as init, commit, add, merge, branch, log, etc.}
@@ -195,6 +161,26 @@
             \resumeItem{Used SHA-1 to generate hashes and ensure proper file distribution}
             \resumeItem{Wrote unit and integration tests with \textbf{JUnit}}
           \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------CLUBS-----------
+\section{Clubs}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Institute of Electrical and Electronics Engineering}}{\textbf{Nov 2022 - Present}}
+          \resumeItemListStart
+            \resumeItem{Gained practical experience in machine learning algorithms, techniques, and tools}
+            \resumeItem{Strengthened statistical and mathematical skills by developing solutions to real-world problems}
+            \resumeItem{Improved communcation skills through participation in weekly meetings}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Rutgers Competitive Programming}}{\textbf{Feb 2023 - Present}}
+          \resumeItemListStart
+            \resumeItem{Developed problem-solving techniques for algorithmic and mathematical concepts}
+            \resumeItem{Improved collaboration skills by working alongside multiple teammates in fast-paced environments}
+            \resumeItem{Strengthened time-management skills through participation in competitions}
+        \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
