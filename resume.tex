@@ -117,17 +117,6 @@
   \resumeSubHeadingListEnd
 
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, Java, Go (Golang), C/C++, SQL} \vspace{1.5pt}\\
-     \textbf{Libraries and Frameworks}{: Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Matplotlib, Flask, FastAPI, Echo} \vspace{1.5pt}\\
-     \textbf{Tools}{: Git, Unix, Jira, Docker, Kubernetes, PostgreSQL, SQLite, MongoDB, Datadog, Sumo Logic, Monte Carlo, Drone, Postman, JUnit, Google Cloud Platform, Amazon Web Services} \\
-    }}
- \end{itemize}
-
-
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -135,16 +124,18 @@
       {The New York Times}{June 2024 -- Aug 2024}
       {Backend Engineer Intern}{New York, NY}
       \resumeItemListStart
-        \resumeItem{Instrumented ETL application with \textbf{OpenTelemetry} to generate custom observability metrics in \textbf{Datadog}}
-        \resumeItem{Enhanced system reliability by developing unit tests and improving \textbf{Drone CI} code coverage from \textbf{40\%} to \textbf{80\%}}
-        \resumeItem{\textit{bullet 3}}
+        \resumeItem{Collaborated with a cross-functional team to build an ETL application with Go, processing \textbf{300k+ invoices} daily}
+        \resumeItem{Instrumented application with \textbf{OpenTelemetry} to generate \textbf{20+} custom observability metrics in \textbf{Datadog}}
+        \resumeItem{Configured monitors in \textbf{Monte Carlo} to detect and alert on data anomalies in a \textbf{BigQuery} warehouse}
+        \resumeItem{Enhanced system reliability by developing unit and integration tests, improving code coverage from \textbf{40\%} to \textbf{90\%}}
       \resumeItemListEnd
     \resumeSubheading
       {Rutgers University}{July 2023 -- May 2024}
       {Undergraduate Research Assistant}{New Brunswick, NJ}
       \resumeItemListStart
-        \resumeItem{\textit{Evaluated potential inefficiencies and implemented improvements for activation-aware weight quantization}}
-        \resumeItem{\textit{Improved inference performance by up to \textbf{10\%} for Llama 2}}
+        \resumeItem{Implemented adaptive rounding for AWQ, optimizing inference performance across various LLM architectures}
+        \resumeItem{Improved the next word prediction accuracy of a quantized \textbf{Llama 2} model by \textbf{10\%} compared to standard AWQ}
+        \resumeItem{Resolved data inefficiencies in AWQ, increasing inference speed from \textbf{110 tokens/s} to \textbf{117 tokens/s} for Llama 2}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -155,40 +146,47 @@
       \resumeProjectHeading
           {\textbf{Tsniper} $|$ \emph{Go, SQLite, pprof}}{Sept 2023 -- Present}
           \resumeItemListStart
-            \resumeItem{Rutgers course sniper implemented as a Discord bot}
+            \resumeItem{Developed a Discord bot that monitors \textbf{20,000+ courses} and alerts users to openings with sub-second latency}
             \resumeItem{Designed and implemented a \textbf{SQLite} database to store and serve data to \textbf{1400+ users}}
-            \resumeItem{Developed a monitoring system to track \textbf{20,000+ sections} and alert users to openings with sub-second latency}
-            \resumeItem{Leveraged \textbf{pprof} to identify and resolve performance bottlenecks, decreasing resource usage by \textbf{20\%}}
+            \resumeItem{Leveraged \textbf{pprof} to identify and resolve performance bottlenecks, decreasing memory usage by \textbf{20\%}}
             \resumeItem{Created a mock API enabling comprehensive end-to-end testing and performance benchmarking}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Gitlet} $|$ \emph{Java, Maven, JUnit}}{July 2023 -- Aug 2023}
-          \resumeItemListStart
-            \resumeItem{Local version control system mirroring the core functionalities of \textbf{Git}}
+      \resumeItemListStart  
+            \resumeItem{Implemented a local version control system mirroring the core functionalities of \textbf{Git}}
             \resumeItem{Optimized storage efficiency with a content-addressable filesystem, eliminating redundant data storage}
             \resumeItem{Designed a custom serialization protocol, resulting in a \textbf{15\% reduction} in file size compared to Java serialization}
-            \resumeItem{Developed a merge algorithm capable of automatically resolving complex multi-way merge conflicts}
             \resumeItem{Ensured application resilience by creating unit and integration tests with \textbf{JUnit}, achieving \textbf{100\%} code coverage}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{WagerPilot} $|$ \emph{Python, MongoDB, Matplotlib, GCP}}{May 2023 -- July 2023}
+          {\textbf{WagerPilot} $|$ \emph{Python, MongoDB, GCP}}{May 2023 -- July 2023}
           \resumeItemListStart
-            \resumeItem{CLI application with tools to calculate probability, convert betting odds, and find arbitrage opportunities}
-            \resumeItem{Architected and deployed a \textbf{MongoDB} database to store and manage processed data of \textbf{5000+ events}}
-            \resumeItem{Developed a webscraper with \textbf{BeautifulSoup} and \textbf{Selenium} capable of efficient large-scale data extraction}
+            \resumeItem{Built a CLI application with tools to calculate probability, convert odds, and find arbitrage opportunities}
+            \resumeItem{Leveraged \textbf{BeautifulSoup} and \textbf{Selenium} to create a webscraper capable of efficient large-scale data extraction}
+            \resumeItem{Architected and deployed a \textbf{MongoDB} database to store and manage the processed data of \textbf{5000+ events}}
             \resumeItem{Automated data pipeline by deploying a \textbf{Google Cloud VM} and \textbf{cronjob}, resulting in a \textbf{95\% uptime}}
-            \resumeItem{Leveraged \textbf{Matplotlib} to create compelling data visualizations, facilitating data-driven decision-making}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{RuTransloc} $|$ \emph{Python, Scikit-learn, FastAPI, Postman, Docker, GCP}}{Mar 2023 -- May 2023}
+          {\textbf{RuTransloc} $|$ \emph{Python, scikit-learn, FastAPI, Docker, GCP}}{Mar 2023 -- May 2023}
           \resumeItemListStart
-            \resumeItem{AI-driven REST API providing real-time arrival predictions for Rutgers buses}
-            \resumeItem{Developed robust API serving \textbf{10,000+ daily requests} with \textbf{FastAPI} and performed testing with \textbf{Postman}}
+            \resumeItem{Developed an AI-driven REST API using \textbf{FastAPI} to handle and serve \textbf{10,000+ daily requests}}
             \resumeItem{Generated \textbf{90\%} accurate arrival predictions by designing and training a SVM with \textbf{scikit-learn}}
             \resumeItem{Optimized and reduced \textbf{Docker} image size by \textbf{80\%}, improving build and deployment speeds}
             \resumeItem{Leveraged \textbf{Artifact Registry} to manage Docker images and enable rapid iteration with \textbf{Cloud Run}}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, Go (Golang), C/C++, SQL} \vspace{1.5pt}\\
+     \textbf{Libraries and Frameworks}{: Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Matplotlib, Flask, FastAPI, Echo} \vspace{1.5pt}\\
+     \textbf{Tools}{: Git, Unix, Jira, Docker, Kubernetes, PostgreSQL, SQLite, MongoDB, Datadog, Sumo Logic, Monte Carlo, Drone, Postman, JUnit, Google Cloud Platform, Amazon Web Services} \\
+    }}
+ \end{itemize}
 
 
 %-------------------------------------------
