@@ -1,0 +1,35 @@
+name: Build LaTeX File
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX to PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Brandon_Liau.tex
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Convert PDF to PNG
+        run: |
+          convert -density 300 Brandon_Liau.pdf -quality 90 Brandon_Liau.png
+
+      - name: Commit PDF and PNG Back to Repository
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "Brandon_Liau.pdf Brandon_Liau.png"
+          message: "[skip ci]: Upload artifacts via Github Actions"
