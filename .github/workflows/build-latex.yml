@@ -31,5 +31,6 @@ jobs:
       - name: Commit PDF and PNG Back to Repository
         uses: EndBug/add-and-commit@v9
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           add: "Brandon_Liau.pdf Brandon_Liau.png"
           message: "[skip ci]: Upload artifacts via Github Actions"
