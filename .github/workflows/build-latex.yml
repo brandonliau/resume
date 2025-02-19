@@ -26,7 +26,7 @@ jobs:
 
       - name: Convert PDF to PNG
         run: |
-          convert -density 300 Brandon_Liau.pdf -quality 90 Brandon_Liau.png
+          convert -density 300 Brandon_Liau.pdf -background white -flatten -quality 90 Brandon_Liau.png
 
       - name: Commit PDF and PNG Back to Repository
         uses: EndBug/add-and-commit@v9
